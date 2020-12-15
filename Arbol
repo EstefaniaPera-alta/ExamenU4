@@ -1,1 +1,149 @@
+package examenu4;
 
+/**
+ *
+ * @author LANIX
+ */
+public class Arbol  extends Nodos{
+    public Arbol() 
+  { 
+      raiz=null; 
+      raiz2=null;
+  } 
+    public void insertar (int info)
+    { 
+    Nodos nuevo; 
+    nuevo = new Nodos ();
+    Nodos nuev;
+    nuev = new Nodos();
+    nuevo.info = info;
+    nuev.info = info;
+    nuevo.izq = null; 
+    nuev.izq2 = null;
+    nuevo.der = null;
+    nuev.der2 = null;
+    if (raiz == null)
+    {
+        raiz = nuevo;
+        raiz2 = nuev;
+    }    
+    else { 
+        Nodos anterior = null, reco; 
+        Nodos anterior2 = null, reco2; 
+        reco = raiz;
+        reco2 = raiz2;
+        while (reco != null) 
+        {
+            anterior = reco;
+            anterior2 = reco2;
+            if (info < reco.info)
+            {
+                reco = reco.izq;
+                reco2 = reco2.der2;
+            }
+            else{ 
+                reco = reco.der;
+                reco2 = reco2.izq2;
+            }
+        } 
+        if (info < anterior.info)
+        {
+            anterior.izq = nuevo; 
+            anterior2.der2 = nuev;
+        }
+        else {
+            anterior.der = nuevo;
+            anterior2.izq2 = nuev;
+        } 
+         
+    } 
+}
+    
+    private void imprimirPre (Nodos reco) 
+{ 
+    if (reco != null) 
+    { 
+        System.out.print(reco.info + " "); 
+        imprimirPre (reco.izq); 
+        imprimirPre (reco.der); 
+    } 
+} 
+public void imprimirPre () 
+{ 
+    imprimirPre (raiz); 
+    System.out.println(); 
+} 
+private void imprimirEntre (Nodos reco) 
+{ 
+    if (reco != null) { 
+        imprimirEntre (reco.izq);
+        System.out.print(reco.info + " "); 
+        imprimirEntre (reco.der); 
+    } 
+} 
+public void imprimirEntre () 
+{ 
+    imprimirEntre (raiz); 
+    System.out.println(); 
+} 
+private void imprimirPost (Nodos reco) 
+{ 
+    if (reco != null) 
+    { 
+        imprimirPost (reco.izq);
+        imprimirPost (reco.der);
+        System.out.print(reco.info + " "); 
+    } 
+} 
+public void imprimirPost () 
+{ 
+    imprimirPost (raiz); 
+    System.out.println(); 
+    
+}
+
+private void imprimirPre2 (Nodos reco2) 
+{ 
+    if (reco2 != null) 
+    { 
+        System.out.print(reco2.info + " "); 
+        imprimirPre (reco2.der2); 
+        imprimirPre (reco2.izq2); 
+    } 
+} 
+public void imprimirPre2 () 
+{ 
+    imprimirPre (raiz2); 
+    System.out.println(); 
+} 
+private void imprimirEntre2 (Nodos reco2) 
+{ 
+    if (reco2 != null) { 
+        imprimirEntre (reco2.der2);
+        System.out.print(reco2.info + " "); 
+        imprimirEntre (reco2.izq2); 
+    } 
+} 
+public void imprimirEntre2 () 
+{ 
+    imprimirEntre (raiz); 
+    System.out.println(); 
+} 
+private void imprimirPost2 (Nodos reco2) 
+{ 
+    if (reco2 != null) 
+    { 
+        imprimirPost (reco2.der2);
+        imprimirPost (reco2.izq2);
+        
+        System.out.print(reco2.info + " "); 
+    } 
+} 
+public void imprimirPost2 () 
+{ 
+    imprimirPost (raiz2); 
+    System.out.println(); 
+    
+}
+
+}
