@@ -1,1 +1,18 @@
+package examenu4;
+
+/**
+ *
+ * @author LANIX
+ */
+public class Nodos {
+     int info;
+    Nodos izq, der;
+    Nodos raiz;
+    
+    
+    String info2;
+    Nodos izq2, der2;
+    Nodos raiz2;
+    
+}
 
