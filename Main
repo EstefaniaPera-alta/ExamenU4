@@ -1,0 +1,46 @@
+package examenu4;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author LANIX
+ */
+public class ExamenU4 extends Arbol{
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        int num;
+        ExamenU4 abo = new ExamenU4();
+        for(int i=0; i<10; i++){
+        System.out.println("Ingresa un numero");
+        num = leer.nextInt();
+        abo.insertar(num);
+        }
+        System.out.println("*********************");
+        System.out.println("Arbol Normal");
+        System.out.println("*********************");
+        System.out.println ("Impresion preorden: "); 
+        abo.imprimirPre (); 
+    System.out.println ("Impresion entreorden: "); 
+    abo.imprimirEntre (); 
+    System.out.println ("Impresion postorden: "); 
+    abo.imprimirPost (); 
+    
+    
+    
+    System.out.println("*********************");
+        System.out.println("Arbol Espejo");
+        System.out.println("*********************");
+        System.out.println ("Impresion preorden: "); 
+        abo.imprimirPre2 (); 
+    System.out.println ("Impresion entreorden: "); 
+    abo.imprimirEntre2 (); 
+    System.out.println ("Impresion postorden: "); 
+    abo.imprimirPost2 (); 
+    }
+ }
+    
