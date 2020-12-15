@@ -102,26 +102,26 @@ public void imprimirPost ()
     
 }
 
-private void imprimirPre2 (Nodos reco2) 
+private void imprimirPre2 (Nodos reco) 
 { 
-    if (reco2 != null) 
+    if (reco!= null) 
     { 
-        System.out.print(reco2.info + " "); 
-        imprimirPre (reco2.der2); 
-        imprimirPre (reco2.izq2); 
+        System.out.print(reco.info + " "); 
+        imprimirPre (reco.der); 
+        imprimirPre (reco.izq); 
     } 
 } 
 public void imprimirPre2 () 
 { 
-    imprimirPre (raiz2); 
+    imprimirPre (raiz); 
     System.out.println(); 
 } 
-private void imprimirEntre2 (Nodos reco2) 
+private void imprimirEntre2 (Nodos reco) 
 { 
-    if (reco2 != null) { 
-        imprimirEntre (reco2.der2);
-        System.out.print(reco2.info + " "); 
-        imprimirEntre (reco2.izq2); 
+    if (reco != null) { 
+        imprimirEntre (reco.der);
+        System.out.print(reco.info + " "); 
+        imprimirEntre (reco.izq); 
     } 
 } 
 public void imprimirEntre2 () 
@@ -129,19 +129,19 @@ public void imprimirEntre2 ()
     imprimirEntre (raiz); 
     System.out.println(); 
 } 
-private void imprimirPost2 (Nodos reco2) 
+private void imprimirPost2 (Nodos reco) 
 { 
-    if (reco2 != null) 
+    if (reco != null) 
     { 
-        imprimirPost (reco2.der2);
-        imprimirPost (reco2.izq2);
+        imprimirPost (reco.der);
+        imprimirPost (reco.izq);
         
-        System.out.print(reco2.info + " "); 
+        System.out.print(reco.info + " "); 
     } 
 } 
 public void imprimirPost2 () 
 { 
-    imprimirPost (raiz2); 
+    imprimirPost (raiz); 
     System.out.println(); 
     
 }
