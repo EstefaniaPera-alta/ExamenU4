@@ -107,41 +107,41 @@ private void imprimirPre2 (Nodos reco)
     if (reco!= null) 
     { 
         System.out.print(reco.info + " "); 
-        imprimirPre (reco.der); 
-        imprimirPre (reco.izq); 
+        imprimirPre2 (reco.der); 
+        imprimirPre2 (reco.izq); 
     } 
 } 
 public void imprimirPre2 () 
 { 
-    imprimirPre (raiz); 
+    imprimirPre2 (raiz); 
     System.out.println(); 
 } 
 private void imprimirEntre2 (Nodos reco) 
 { 
     if (reco != null) { 
-        imprimirEntre (reco.der);
+        imprimirEntre2 (reco.der);
         System.out.print(reco.info + " "); 
-        imprimirEntre (reco.izq); 
+        imprimirEntre2 (reco.izq); 
     } 
 } 
 public void imprimirEntre2 () 
 { 
-    imprimirEntre (raiz); 
+    imprimirEntre2 (raiz); 
     System.out.println(); 
 } 
 private void imprimirPost2 (Nodos reco) 
 { 
     if (reco != null) 
     { 
-        imprimirPost (reco.der);
-        imprimirPost (reco.izq);
+        imprimirPost2 (reco.der);
+        imprimirPost2 (reco.izq);
         
         System.out.print(reco.info + " "); 
     } 
 } 
 public void imprimirPost2 () 
 { 
-    imprimirPost (raiz); 
+    imprimirPost2 (raiz); 
     System.out.println(); 
     
 }
